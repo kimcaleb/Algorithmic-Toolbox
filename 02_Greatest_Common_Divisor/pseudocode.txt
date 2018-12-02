@@ -1,0 +1,11 @@
+
+Use the Euclidean Algorithm
+Receive input a and b.
+Note: In java, the division of two integer values will always round bottowm. 
+
+1. Find the greater of the two values. 
+2. Perform the modulo operation of the larger value by the samller one. Store the result in a variable, let's call it mod. 
+3. Perform the modulo operation of the previous smaller number by the mod. Replace the new mod variable with new value. Figure out a way to keep track of the smaller variable value for each iteration.
+4. Repeat until the value returned by the modulo operation is 0. 
+5. The greatest common divisor is whatever is stored in the mod previously before it was evaluated to 0.
+6. Return this value. 
