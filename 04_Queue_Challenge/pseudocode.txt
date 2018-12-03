@@ -1,0 +1,12 @@
+1. Receive input. 
+2. Create a string variable called input. Use the replaceAll() and toLowerCase() methods of the String class to remove any characters that are not a letter and empty spaces. Transform the string to all lowercase. 
+3. Create 2 LinkedList objects and store it in  LinkedList reference variables, call one stack and the other queue.
+4. Create char[] array and use the toCharArray() method on the String input and store the result into the char[] array variable.
+5. Use the addLast() method to add the characters into the queue;
+6. Use the push() method to add the characters into the stack.
+7. while (the stack size is greater than 0)
+	if(the popped item from the stack equals the removedFirst item from queue)
+		continue;
+	else 
+		return false;
+8. Return true. (It is a palindrome)

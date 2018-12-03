@@ -61,6 +61,10 @@ Use Euclidean Algorithm to first find the GCF of the two values.
 4. Repeat until the value returned by the modulo operation is 0. 
 5. The greatest common divisor is whatever is stored in the mod previously before it was evaluated to 0.
 6. Return this value. 
+	finding GCF Done
+7. divide larger number by GCF.
+8. Take the result of the previous step and multiply it to the samller number.
+9. The result returned by step 8 is the LCM. Return. 
 
 
 
