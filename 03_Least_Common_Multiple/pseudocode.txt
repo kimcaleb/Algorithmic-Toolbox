@@ -1,0 +1,68 @@
+
+<--First Attemp-->
+1. Receive both inputs a and b. 
+2. Set up a variable called larger and store as its value the larger of the two values of a and b. This larger variable will be the limit after which we no longer look for possible LCMs. 
+2. Set up a variable called Least Common Multople(LCM) for the return value.
+3. Set up another variable to keep track of the decremented LCM, called potentialLCM. Initialize this value to current LCM. 
+4. Initialize the LCM variable to the result of multiplying a and b. This will be our starting point for traversing for other possible LCMs. 
+5. while (potentialLCM >= larger)
+	potentialLCM--;
+	if (potentialLCM modulo a AND potentialLCM modulo LCM b equal 0)
+		LCM = potentialLCM;
+	else do nothing
+   endWhile
+6. return LCM. 
+		
+NO GOOD TOO SLOW: 
+Failed case #2/42: time limit exceeded
+Input:
+14159572 63967072
+
+Your output:
+
+stderr:
+
+ (Time used: 3.17/1.50, memory used: 26615808/536870912.)
+
+<--Second Attempt-->
+Use the common properties of finding the LCM of two or more numbers. For example, for a given input of two values a and b, and b is the larger value, if a is a multiple of b, then the LCM is the value of b. If a is not a multiple of b and a is not a prime number, double the value of b and check again if that new value has a as a multiple. If it is, then the LCM is the doubled value of b. If a is not a multiple of b but it is a prime number, then the LCM will be the multiplication of a and b. 
+Remember, a prime number is a whole number greater than 1 whose only factors are 1 and itself. Create a separate function that will check whether a number is prime or not.Remeber that no number is divisible by more than its half. 
+1. Receive both inputs a and b.
+2. Find the larger of the two values. Store this in a separate variable, let's call it larger.
+3. create a variable called LCM.  
+4. Create a variable called isPrime and check whether a is a prime value or not. 
+5. while (infiinte loop)
+	if (larger modulo a equals 0) 
+		LCM is equal to  larger
+		end while
+	else if (isPrime is true)
+		LCM is the multiplication of a and b.
+		end while.
+	else 
+		larger is equal to larger plus larger. 
+6. return LCM. 
+STILL NOT FAST ENOUGH
+Failed case #15/42: time limit exceeded
+Input:
+2000000000 1999999999
+
+Your output:
+
+stderr:
+
+ (Time used: 3.21/1.50, memory used: 26681344/536870912.)
+
+<--Third Attempt-->
+Use Euclidean Algorithm to first find the GCF of the two values. 
+
+1. Find the greater of the two values. 
+2. Perform the modulo operation of the larger value by the samller one. Store the result in a variable, let's call it mod. 
+3. Perform the modulo operation of the previous smaller number by the mod. Replace the new mod variable with new value. Figure out a way to keep track of the smaller variable value for each iteration.
+4. Repeat until the value returned by the modulo operation is 0. 
+5. The greatest common divisor is whatever is stored in the mod previously before it was evaluated to 0.
+6. Return this value. 
+
+
+
+	
+		
