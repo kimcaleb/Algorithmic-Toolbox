@@ -25,8 +25,6 @@ public class Main {
 		LinkedList<Character> queue = new LinkedList();
 		for (int i=0; i< charArray.length; i++) {
 			stack.push(charArray[i]);
-		}
-		for (int i=0; i<charArray.length; i++) {
 			queue.addLast(charArray[i]);
 		}
 		while (stack.size()>0) {
