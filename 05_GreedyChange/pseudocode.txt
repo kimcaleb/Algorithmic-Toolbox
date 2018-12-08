@@ -1,0 +1,16 @@
+C = change we want to produce with least amount of coins
+
+moneyChange(C) 
+	A <- [10,5,1]
+	Change <- C
+	Count <- 0
+	for i from 0 to n-1
+		while Change is greater than or equal to Ai
+			Change <- Change-Ai
+			Count++			
+		else
+			move on to next coin.
+	return Count
+
+
+Passes all specifications!
