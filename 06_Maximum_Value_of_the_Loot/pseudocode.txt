@@ -1,0 +1,35 @@
+
+<--First Attempt-->
+1. First get value per unit of weight for each of the item. 
+2. Store these value/weight into an array. Sort the Array in Descending Order. 
+W = Capacity of our Bag.
+A = Array of value/weight values
+B = Array of Items denoted by its total starting weight sorted according to value/weight. 
+V = total running value. 
+maximumValueOfTheLoot(W,A,B) 
+	V = 0;
+	W = w;
+	for i from 0 to (n of A)-1
+		while W > 0 AND B[i]>0  
+			min = (B[i], W)
+			W = W - min
+			V += A[i]*min
+		if W <= 0
+			Break out of loop.
+	return V;
+		
+
+Challenge: how to make the A array items align with the B array items so that the sorted v/w values map to their corresponding w values in increasing indices.  
+
+First we sort the array of value/weight values in an arraylist, let's call it arrayA. Then store the value items into a separate array.  Then with a third array, we add the weight values by taking the item from second array and .... This won't work
+ 
+Using Treemap will work. For the keys, use the value/weight values and for the value, use weight for the key/value pair. This way the keys are being sorted as they are being inserted in the data structure while keeping track of the weight in which we are intersted in. We also need a separate array to store value/weight values and sort them separately since we can't obtain these from the map. From the treeMap, we use the .values() method to obtain the weight values and store them in a separate array. In the end, we will have sorted value/weight values in descending order that will have their weights matched by the same indices. 
+
+/*Failed case #6/13: Wrong answer
+got: 3032.1773 expected: 7777.731
+ (Time used: 0.82/1.50, memory used: 34521088/671088640.) */
+
+<--Second Attempt-->
+// Bug: TreeMap cannot have duplicate keys, so this won't work for all test cases. Need another way to sort value//weight values and match their respective weight values in a separate array. 
+ 
+					
