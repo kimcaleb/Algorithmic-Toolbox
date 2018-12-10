@@ -1,0 +1,71 @@
+
+
+Create standart input stream to read from terminal.
+Create an array of strings, setting capacity to the max value specified on the first line of the terminal. 
+
+Loop through the array and initialize elements with the values from the terminal. 
+
+Pass array to largestNumber method.
+Within the function, do the following:
+
+
+1.  var newString = "";
+2.  var newArrayList; 
+3.  for i from 0 to n-1
+	if element(i).length > 0	
+		tempArray <-element(i).split("")
+			for x from 0 to n-1
+				newArrayList.add(tempArray[x])
+	else 
+		newArrayList.add(element[i])
+4. Sort ArrayList in descending order
+5. for c from 0 to n-1
+	newString += newArrayList.get(c)
+
+
+
+answer <- empty string
+while Digits is not empty:
+	maxDigit <- -1
+	for digit in Digits:
+		isGreaterThanOrEqual(digit,maxDigit)
+			maxDigit <- digit
+	append maxDigit to answer
+	remove maxDigit from Digits
+return answer. 
+
+isGreaterThanOrEqual(digit,maxDigit) 
+	create two string arrays. 
+	Split each string arguments into arrays.
+	boolean greater = false;
+	int i=0,x=0;
+        while (i<a.length && x<b.length) 
+            if digitArray[i] >= maxDigit[x]
+		if ( i != a.length-1 && x != b.length-1)
+		  	greater = true;	
+			i++; x++;
+		else if (x == b.length-1 && greater == true)
+			break;
+		else if (x == b.length-1 && maxDigit[x] >= digitArray[++i])
+			greater = false;
+		else if (x == b.length-1 && maxDigit[x] < digitArray[++i])
+			greater = true;
+		else if (i == a.length-1 && digitArray[i] > maxDigit[++x])
+			greater = true;
+		else if (i === a.length-1 && digitArray[i] <= maxDigit[++x] 
+			greater false;
+			
+	    else if digitArray[i] < maxDigit[x]
+		greater = false;
+		break;
+        
+	return greater.  
+
+
+				
+			
+		
+	
+
+	
+		

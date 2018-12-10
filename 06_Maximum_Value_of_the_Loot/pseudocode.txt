@@ -32,4 +32,8 @@ got: 3032.1773 expected: 7777.731
 <--Second Attempt-->
 // Bug: TreeMap cannot have duplicate keys, so this won't work for all test cases. Need another way to sort value//weight values and match their respective weight values in a separate array. 
  
+
+got: 3032.1773 expected: 7777.731
+ (Time used: 0.82/1.50, memory used: 34521088/671088640.)
+// Bug: TreeMap cannot have duplicate keys, so this won't work for all test cases. Need another way to sort value//weight values and match their respective weight values in a separate array.  `
 					
