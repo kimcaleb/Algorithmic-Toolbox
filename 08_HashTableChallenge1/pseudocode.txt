@@ -1,0 +1,6 @@
+
+
+1. Create a HashMap
+2. Iterate through the linked list. 
+3. For each element, read the employee's id. Use the HashMap to put that element's id as the key and employee instance as the value. 
+3. Your new data structure HashMap now has the elmenets from the linkedlist but wtih duplicates removed because of the nature of the HashMap.put() method. 
