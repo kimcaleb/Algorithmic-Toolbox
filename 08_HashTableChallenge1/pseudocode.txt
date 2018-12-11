@@ -2,8 +2,8 @@
 
 1. Create a HashMap
 2. Create a separate list to store items to be removed from linkedlist. 
-2. Iterate through the linked list. 
-3. For each element, use the HashMap.containsKey() method to first check whether the employee's key is already there. If it is, add to list of items to be removed. 
+3. Iterate through the linked list. 
+4. For each element, use the HashMap.containsKey() method to first check whether the employee's key is already there. If it is, add to list of items to be removed. 
 	else add to HashMap. 
-4. At the end of the iteration, all the elements to be removed will be in the separate list. 
-3. Remove these items from the LinkedList.  
+5. At the end of the iteration, all the elements to be removed will be in the separate list. 
+6. Remove these items from the LinkedList.  
