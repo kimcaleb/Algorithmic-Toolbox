@@ -45,7 +45,7 @@ public class Tree {
             }
 			
 			subtreeRoot.setData(subtreeRoot.getRightChild().min());
-			subtreeRoot.setRightChild(delete(subtreeRoot.getLeftChild(), subtreeRoot.getData()));
+			subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(), subtreeRoot.getData()));
         }
 
         return subtreeRoot;
