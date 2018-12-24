@@ -43,6 +43,9 @@ public class Tree {
             else if (subtreeRoot.getRightChild() == null) {
                 return subtreeRoot.getLeftChild();
             }
+			
+			subtreeRoot.setData(subtreeRoot.getRightChild().min());
+			subtreeRoot.setRightChild(delete(subtreeRoot.getLeftChild(), subtreeRoot.getData()));
         }
 
         return subtreeRoot;
