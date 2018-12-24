@@ -1,0 +1,31 @@
+PreOrder Binary Search Tree PreOrderTraversel:
+
+
+We start in the Tree class with the root node by first checking whether it is not null. If not null, we call it's traverselPreOrder() method. From there:
+
+Visit root first, then root's leftchild if it exists, then root's rightchild if it exists recursively. Base case is when we have a null for left or right child. 
+
+public void traverselPreOrder()
+	Do something with root node
+	if (leftchild not null)
+		call leftchild's traverselPreOrder()
+	if (rightchild not null)
+		call rightchild's traverselPreOrder()
+
+
+
+
+PreOrder Binary Search Tree PostOrderTraversel:
+
+We start in the Tree class with the root node by first checking whether it is not null. If not null, we call it's traverselPostOrder() method. From there:
+
+Visit root's leftchild if it exists, then root's rightchild if it exists, then do something with root recursively. Base case is when we have a null for left or right child. 
+
+public void traverselPostOrder()
+	if (leftchild not null)
+		call leftchild's traverselPreOrder()
+	if (rightchild not null)
+		call rightchild's traverselPreOrder()
+	Do something with root node
+
+	
