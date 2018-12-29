@@ -17,8 +17,67 @@ public class Main {
         }
 
     }
+	// 40 ms runtime My Solution
+	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode p = l1, q = l2, curr = dummyHead;
+        int carryOver = 0;
+        while (p != null || q != null) {
+            if (p == null) {
+                int result = q.val + carryOver;
+                if (result < 10) {
+                    curr.next = new ListNode(result);
+                    curr = curr.next;
+                    q = q.next;
+                    carryOver = 0;
+                } else {
+                    carryOver = 0;
+                    curr.next = new ListNode(result%10);
+                    carryOver++;
+                    curr = curr.next;
+                    q = q.next;
+                }
+            } else if (q == null) {
+                int result = p.val + carryOver;
+                if (result <10) {
+                    curr.next = new ListNode(result);
+                    p = p.next;
+                    curr = curr.next;
+                    carryOver = 0;
+                } else {
+                    carryOver = 0;
+                    curr.next = new ListNode(result%10);
+                    carryOver++;
+                    curr = curr.next;
+                    p = p.next;
+                }
 
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+            }  else {
+                int result = p.val + q.val + carryOver;
+                if (result<10) {
+                    curr.next = new ListNode(result);
+                    curr = curr.next;
+                    carryOver = 0;
+                    p = p.next;
+                    q = q.next;
+                } else {
+                    carryOver = 0;
+                    curr.next = new ListNode(result%10);
+                    curr = curr.next;
+                    carryOver++;
+                    p = p.next;
+                    q= q.next;
+                }
+            }
+        }
+        if (carryOver >0) {
+            curr.next = new ListNode(carryOver);
+        }
+        return dummyHead.next;
+    }
+
+//Leet Code's Solution 47 ms runtime
+    public static ListNode addTwoNumber2(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1, q = l2, curr = dummyHead;
         int carry = 0;
