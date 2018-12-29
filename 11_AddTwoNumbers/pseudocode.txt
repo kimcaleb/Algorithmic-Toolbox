@@ -13,11 +13,11 @@ while (p does not equal null OR q does not equal null)
 			curr.next = new ListNode(result)
 			curr = curr.next;
 			q = q.next
+			carryOver = 0
 		else
-			curr.next = new ListNode(0)
+			curr.next = new ListNode(result % 10)
+			carryOver++;
 			curr = curr.next;
-			curr.next = new ListNode(1)
-			curr = curr.next
 			q = q.next
 			
 	else if (q == null)
@@ -26,11 +26,11 @@ while (p does not equal null OR q does not equal null)
 			curr.next = new ListNode(result)
 			curr = curr.next;
 			p = p.next
+			carrOver = 0
 		else
-			curr.next = new ListNode(0)
+			curr.next = new ListNode(result % 10)
+			carryOver++
 			curr = curr.next;
-			curr.next = new ListNode(1)
-			curr = curr.next
 			p = p.next
 			
 	else
@@ -47,6 +47,11 @@ while (p does not equal null OR q does not equal null)
 			carrOver++
 			p = p.next
 			q = q.next
+If (carrOver > 0)
+	curr.next = new ListNode(carrOver);
+return dummHead.next
+
+
 
 
 LeetCode's Solution:
@@ -62,5 +67,27 @@ Create a new node with the digit value of (sum \bmod 10)(summod10) and set it to
 Advance both pp and qq.
 Check if carry = 1carry=1, if so append a new node with digit 11 to the returning list.
 Return dummy head's next node.
+
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode p = l1, q = l2, curr = dummyHead;
+        int carry = 0;
+        while (p != null || q != null) {
+            int x = (p != null) ? p.val : 0;
+            int y = (q != null) ? q.val : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
+            if (p != null) p = p.next;
+            if (q != null) q = q.next;
+        }
+        if (carry > 0) {
+            curr.next = new ListNode(carry);
+        }
+        return dummyHead.next;
+    }
+}
 		
 	
