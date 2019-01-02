@@ -1,0 +1,1 @@
+We want to get the letter at the position we are looking at. When we sort the Strings, we want to start at the right like we did with the integer values because the least significant position is at the right. 
