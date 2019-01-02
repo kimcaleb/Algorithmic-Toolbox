@@ -1,0 +1,31 @@
+Start by looking at the iterative soltuion:
+Think about what's happening in the outer loop. On each iteration, we're expanding the sorted partition by 1. It would be nice to call a method with the number of items we want to sort because if we start off with the first 2 items and we sort them and then the 3 items, then the 4 items, etc. then we would end up sorting the entire array.
+
+        for (int firstUnsortedIndex = 1; firstUnsortedIndex < intArray.length;
+             firstUnsortedIndex++) {
+            int newElement = intArray[firstUnsortedIndex];
+            int i;
+
+            for (i = firstUnsortedIndex; i > 0 && intArray[i - 1] > newElement; i--) {
+                intArray[i] = intArray[i - 1];
+            }
+
+            intArray[i] = newElement;
+        }
+
+Assume we are starting at the front of the array
+Now we need a breaking condition: if number of items is less than 2. That means when we have 1 item by defiintion that item is sorted..
+
+inserstionSort(array[], int numItemsToSort)
+	if (numItems < 2)
+		return;
+	insertionSort(input, numItemsToSort -1)
+	int newElement = intArray[firstUnsortedIndex];
+        int i;
+
+        for (i = firstUnsortedIndex; i > 0 && intArray[i - 1] > newElement; i--) {
+                intArray[i] = intArray[i - 1];
+            }
+
+            intArray[i] = newElement;
+        }
